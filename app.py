@@ -16,7 +16,7 @@ class BusinessPlanError(Exception):
     """Custom exception for business plan generation errors."""
     pass
 
-api_key = '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'
+api_key = os.getenv('API_KEY')
 generator = BusinessPlanGenerator(api_key)
 
 app = Flask(__name__)
